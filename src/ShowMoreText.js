@@ -24,7 +24,8 @@ class ShowMoreText extends Component {
         expanded: false,
         width: 0,
         keepNewLines: false,
-        truncatedEndingComponent: '... '
+        truncatedEndingComponent: '... ',
+        appendComponent: null
     };
 
     static propTypes = {
@@ -38,7 +39,8 @@ class ShowMoreText extends Component {
         expanded: PropTypes.bool,
         width: PropTypes.number,
         keepNewLines: PropTypes.bool,
-        truncatedEndingComponent: PropTypes.node
+        truncatedEndingComponent: PropTypes.node,
+        appendComponent: PropTypes.node
     };
 
     componentDidMount() {
@@ -92,7 +94,8 @@ class ShowMoreText extends Component {
             className,
             width,
             keepNewLines,
-            truncatedEndingComponent
+            truncatedEndingComponent,
+            appendComponent
         } = this.props;
 
         const { expanded, truncated } = this.state;
@@ -105,6 +108,7 @@ class ShowMoreText extends Component {
                     ellipsis={
                         <span>
                             {truncatedEndingComponent}
+                            {appendComponent}
                             <a
                                 href=''
                                 className={anchorClass}
@@ -134,6 +138,7 @@ class ShowMoreText extends Component {
                 {!truncated && expanded && (
                     <span>
                         {' '}
+                        {appendComponent}
                         <a
                             href=''
                             className={anchorClass}
