@@ -1,4 +1,4 @@
-# React Show More Text 1.5.0
+# React Show More Text 2 1.0.0
 
 [![NPM version][npm-image]][npm-url]
 [![Downloads][downloads-image]][npm-url]
@@ -7,71 +7,66 @@
 
 The text surrounded by the component will be truncated. Anything surrounded by the component could be evaluated as text. The component react-show-more-text/ShowMoreText is fork of react-show-more/ShowMore, applied improvements, works with React 16.x.x, added onClick event.
 
-## Demo
-
-[https://www.devzonetech.com/demo/react-show-more-text/build/](https://www.devzonetech.com/demo/react-show-more-text/build/)
-
 ## Install
 
 ```
-$ npm install react-show-more-text
+$ npm install react-show-more-text2
 ```
 
 ## Usage
 
 ```js
-import ShowMoreText from "react-show-more-text";
+import ShowMoreText from "react-show-more-text2";
 
 // ...
 
 class Foo extends Component {
-    executeOnClick(isExpanded) {
-        console.log(isExpanded);
-    }
+  executeOnClick(isExpanded) {
+    console.log(isExpanded);
+  }
 
-    render() {
-        return (
-            <ShowMoreText
-                /* Default options */
-                lines={3}
-                more="Show more"
-                less="Show less"
-                className="content-css"
-                anchorClass="my-anchor-css-class"
-                onClick={this.executeOnClick}
-                expanded={false}
-                width={280}
-                truncatedEndingComponent={"... "}
-            >
-                Lorem ipsum dolor sit amet, consectetur{" "}
-                <a
-                    href="https://www.yahoo.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    yahoo.com
-                </a>{" "}
-                adipiscing elit, sed do eiusmod tempor incididunt
-                <a
-                    href="https://www.google.bg/"
-                    title="Google"
-                    rel="nofollow"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    www.google.bg
-                </a> ut labore et dolore magna amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            </ShowMoreText>
-        );
-    }
+  render() {
+    return (
+      <ShowMoreText
+        /* Default options */
+        lines={3}
+        more="Show more"
+        less="Show less"
+        className="content-css"
+        anchorClass="my-anchor-css-class"
+        onClick={this.executeOnClick}
+        expanded={false}
+        width={280}
+        truncatedEndingComponent={"... "}
+      >
+        Lorem ipsum dolor sit amet, consectetur{" "}
+        <a
+          href="https://www.yahoo.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          yahoo.com
+        </a>{" "}
+        adipiscing elit, sed do eiusmod tempor incididunt
+        <a
+          href="https://www.google.com/"
+          title="Google"
+          rel="nofollow"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          www.google.com
+        </a> ut labore et dolore magna amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+        nostrud exercitation ullamco laboris nisi ut aliquip ex Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+      </ShowMoreText>
+    );
+  }
 }
 ```
 
@@ -116,11 +111,3 @@ Compile to ES5 from /src to /lib
 ```
 $ npm run compile
 ```
-
-[npm-url]: https://npmjs.org/package/react-show-more-text
-[downloads-image]: http://img.shields.io/npm/dm/react-show-more-text.svg
-[npm-image]: https://badge.fury.io/js/react-show-more-text.svg
-[travis-url]: https://travis-ci.com/devzonetech/react-show-more-text
-[travis-image]: https://travis-ci.com/devzonetech/react-show-more-text.svg?branch=master
-[david-dm-url]: https://david-dm.org/devzonetech/react-show-more-text
-[david-dm-image]: https://david-dm.org/devzonetech/react-show-more-text.svg
