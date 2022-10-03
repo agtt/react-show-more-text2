@@ -134,6 +134,7 @@ class ShowMoreText extends Component {
                 {!truncated && expanded && (
                     <span>
                         {' '}
+                        {truncatedEndingComponent}
                         <a
                             href=''
                             className={anchorClass}
